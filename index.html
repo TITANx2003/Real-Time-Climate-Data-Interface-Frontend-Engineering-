@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Climate Data Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Climate Data Interface</h1>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+        
+        <main id="weatherDisplay" class="hidden">
+            <div class="grid-layout">
+                <div class="card temp-card">
+                    <h2>Temperature</h2>
+                    <p id="tempValue">--°C</p>
+                </div>
+                <div class="card detail-card">
+                    <h2>Conditions</h2>
+                    <p id="conditionValue" style="text-transform: capitalize;">--</p>
+                </div>
+                <div class="card detail-card">
+                    <h2>Humidity</h2>
+                    <p id="humidityValue">--%</p>
+                </div>
+                <div class="card detail-card">
+                    <h2>Wind Speed</h2>
+                    <p id="windValue">-- m/s</p>
+                </div>
+            </div>
+        </main>
+        
+        <div id="errorMsg" class="error hidden"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
